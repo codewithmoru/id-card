@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>icard.com</title>
+    <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
+  
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+  <h1 style="background-color:powderblue; text-align:center" class="m-4">ID-Card Generator !</h1>
+  <script>
+    
+    </script>
+<div class="registration-form">
+        <form>
+            <div class="form-icon">
+                <span><i class="icon icon-user"></i></span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="fname" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="lname" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control item" id="Email" placeholder="Email">
+            </div>
+          <div class="form-group">
+                <input type="number" class="form-control item" id="Mobno" placeholder="Phone No">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="Myadd" placeholder="Address">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control item" id="pcode" placeholder="Pincode">
+            </div>
+          <div class="form-group">
+                <label >Upload Your Image</label>
+                <input type="file"  accept="image/*" name="image" id="imgfile" class="form-control item" onchange="loadFile(event)">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-block create-account" data-bs-toggle="modal" data-bs-target="#myModal" id="btnSubmit" onclick="testVariable()">Create Card</button>
+            </div>
+          <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Thank You
+                        <span class="fas fa-heart"></span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ps-2">Thank You for sharing your views with us.</div>
+                </div>
+            </div>
+        </div>
+        </form>
+        
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Thank You
+                        <span class="fas fa-heart"></span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ps-2">Thank You for sharing your views with us. We will get back to you as soon as
+                        possible.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <section id="id-form">
+  <div class="container py-5" id="id-form">
+    <div class="row d-flex justify-content-center align-items-center ">
+      <div class="col col-lg-8 mb-10 mb-lg-0">
+        <div class="card mb-3" style="border-radius: .5rem;">
+          <div class="row g-0">
+            <div class="col-md-4 gradient-custom text-center text-white"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                alt="Avatar" id="output" class="rounded-circle my-5" alt="User-Profile-Image" width="100" height="100" />
+              <h5 id="p1">First Name</h5>
+              <p id="p2">Last Name</p>
+              <i class="far fa-edit mb-5"></i>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6>Information</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Email</h6>
+                    <p class="text-muted" id="p3">info@example.com</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Phone</h6>
+                    <p class="text-muted" id="p5">123 456 789</p>
+                  </div>
+                </div>
+                <h6>More About Me</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Address</h6>
+                    <p class="text-muted" id="p4">Lorem ipsum</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Pincode</h6>
+                    <p class="text-muted" id="p6">....</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="row d-flex justify-content-center">
+
+<div class="col-md-6" style="text-align:center">  
+    
+    <button id="download-button">Download</button>
+    
+</div>    
+
+    
+</div>
+  <footer>
+    <h1 style="background-color:powderblue; text-align:center" class="m-4">By : codewithmoru..!</h1>
+  </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/blueimp/JavaScript-MD5/master/js/md5.min.js"></script>
+    <script type="text/javascript" src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
